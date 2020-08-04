@@ -1,0 +1,30 @@
+<section>
+    <div class="container">
+        <div class="logo"></div>
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-5">
+                <div class="form d-flex">
+                    <form formGroup="LoginForm">
+                        <h1>Log In To Access</h1>
+                        <mat-form-field>
+                            <label>User Name</label>
+                            <input type="name" fontControlName="name">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <label>Password</label>
+                            <input [type]="passwordToggle ? 'text' : 'password'" fontControlName="password">
+                            <button type="button" mat-icon-button class="btn-fix" (click)="togglePassword($event)">
+                                <mat-icon color="primary">{{passwordToggle ? 'visibility' : 'visibility_off'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <button type="submit" color="primary" [disabled]="loginForm.invalid || loading" mat-raised-button>
+                            <mat-icon *ngIf="loading" class="mr-2 spinning">sync</mat-icon>
+                            <span>{{loading ? 'Logging in' : 'Login'}}</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-7"></div>
+        </div>
+    </div>
+</section> 
