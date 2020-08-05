@@ -1,0 +1,6 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [opened]="sideOpened"></mat-sidenav>
+    <mat-sidenav-content>
+        <app-side-nav (menuToggle)="sideOpened = !sideOpened"></app-side-nav>
+    </mat-sidenav-content>
+</mat-sidenav-container>

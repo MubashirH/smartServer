@@ -1,12 +1,19 @@
 .row {
     height: 100vh;
     .form {
-        height: 100%;
         align-items: center;
         form {
             flex-direction: column;
             display: flex;
+            width: 100%;
             input { width: 100%; }
+            .btn-fix {
+                position: absolute;
+                top: -10px;
+            }
+            .submit {
+                width: 50%;
+            }
         }
     }
 }
